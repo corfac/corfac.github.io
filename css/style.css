@@ -17,7 +17,7 @@ body {
 
 .headerTop {
 	background-color: #4D4D4B;
-	height: 5px;
+	height: 2px;
 	line-height: 0;
 	font-size: 0;
 }
@@ -33,6 +33,11 @@ body {
 
 .brandRow td {
 	padding: 0;
+	line-height: 0;
+}
+
+.brandLogoCell {
+	background-color: #ffffff;
 }
 
 .bannerCell {
@@ -68,6 +73,17 @@ a.textlink:hover {
 
 .subnavRow td {
 	padding: 0;
+	position: relative;
+}
+
+.subnavRow td:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 2px;
+	background-image: linear-gradient(to right, #ffffff 0, #ffffff 1px, #1a1a1a 1px, #1a1a1a 2px);
 }
 
 .subnavLink {
