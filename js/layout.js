@@ -24,17 +24,23 @@
 			document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 
 			var qrImage = document.getElementById('qrImage');
-			qrImage.src = 'https://quickchart.io/chart?cht=qr&chs=200x200&chl=' + encodeURIComponent(window.location.href);
+			qrImage.src = 'https://quickchart.io/chart?cht=qr&chs=160x160&chl=' + encodeURIComponent(window.location.href);
 
-			document.getElementById('qrToggle').addEventListener('click', function (event) {
+			var qrToggle = document.getElementById('qrToggle');
+
+			qrToggle.addEventListener('click', function (event) {
 				event.preventDefault();
-				if (qrImage.style.display === 'block') {
-					qrImage.style.display = 'none';
-					this.textContent = 'QR Code';
-				} else {
-					qrImage.style.display = 'block';
-					this.textContent = 'Hide QR';
-				}
+				qrImage.style.display = 'block';
+				qrToggle.style.display = 'none';
 			});
+
+			qrImage.addEventListener('click', function () {
+				qrImage.style.display = 'none';
+				qrToggle.style.display = 'inline-block';
+			});
+
+			var shareScript = document.createElement('script');
+			shareScript.src = '/js/sharepop.js';
+			document.getElementById('shareSlot').appendChild(shareScript);
 		});
 })();

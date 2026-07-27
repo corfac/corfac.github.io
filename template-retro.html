@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Wrap Template</title>
+<link rel="shortcut icon" href="/img/favicon.ico">
+<link rel="stylesheet" href="/css/style-retro.css">
+</head>
+<body>
+
+<!--
+	Shared page wrap for every page on the site.
+	js/layout.js fetches this file, replaces the [BASE] token with the
+	current page's relative path back to the site root ("./" at the
+	root, "../" from a one-level-deep section folder), and injects the
+	page's own content into the <main> placeholder below.
+-->
+
+<div id="site-wrap">
+
+<!-- HEADER -->
+<header>
+
+<div class="headerTop"></div>
+
+<div class="navBand">
+
+	<div class="navBandRow">
+		<img class="logoCell" style="margin-top:10px" src="/img/corfac-nav.gif" width="85" height="94" alt="CORFAC International">
+		<div class="brandWrap"><div class="brandRow">
+				<a class="brandLogoCell" href="[BASE]"><img src="/img/logo-right.gif" width="169" height="64" alt="King Industrial Realty of Florida, Inc." border="0"></a>
+				<div class="bannerCell"><img src="/img/banner-florida.jpg" width="416" height="65" alt=""></div>
+				<!-- <div class="toplinks">
+					<a href="[BASE]contact/">CONTACT US</a><br>
+					<a href="[BASE]about-jacksonville-industrial-real-estate/">ABOUT US</a>
+				</div> -->
+				<!-- <div class="toplinks">
+					<a href="[BASE]associations/">ASSOCIATIONS</a><br>
+					<a href="[BASE]careers/">CAREERS</a>
+				</div> -->
+				<div class="shareCell">
+					<script type="text/javascript" src="/js/sharepop.js"></script>
+				</div>
+			</div>
+
+			<div class="subnavRow">
+				<a href="[BASE]services/" class="subnavLink">SERVICES</a>
+				<!-- <a href="[BASE]publications/" class="subnavLink">PUBLICATIONS</a> -->
+				<!-- <a href="[BASE]property-management/" class="subnavLink">PROPERTY MANAGEMENT</a> -->
+				<a href="[BASE]contact/" class="subnavLink">CONTACT US</a>
+				<a href="[BASE]about-jacksonville-industrial-real-estate/" class="subnavLink">ABOUT US</a>
+				<a href="[BASE]associations/" class="subnavLink">ASSOCIATIONS</a>
+				<!-- <a href="[BASE]careers/" class="subnavLink">CAREERS</a> -->
+			</div>
+
+		</div>
+	</div>
+
+	<img src="/img/band.gif" alt="" class="bandImg">
+
+</div>
+
+</header>
+<!-- /HEADER -->
+
+<main>
+<!-- PAGE CONTENT -->
+<!-- /PAGE CONTENT -->
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footerBar">
+	<span class="smalltext">&copy;<span id="copyrightYear"></span> - King Industrial Realty of Florida, Inc. - A member of CORFAC International.</span>
+	<div class="qrWrap">
+		<a href="#" id="qrToggle" class="qrLink">QR Code</a>
+		<br>
+		<img id="qrImage" alt="Page QR Code" src="">
+	</div>
+</div>
+
+</footer>
+<!-- /FOOTER -->
+
+</div>
+
+</body>
+</html>

@@ -2,108 +2,113 @@
 
 body {
 	margin: 0;
-	background-color: #9C9A8D;
+	background-color: #ffffff;
 	font-family: Arial, Verdana, Helvetica, sans-serif;
 }
 
 #site-wrap {
 	max-width: 1200px;
 	min-width: 300px;
-	margin: 20px auto 0;
+	margin: 0 auto;
 	background-color: #ffffff;
 }
 
 /* HEADER */
 
-.headerTop {
-	background-color: #4D4D4B;
-	height: 2px;
-	line-height: 0;
-	font-size: 0;
+header,
+footer {
+	position: relative;
+	left: 50%;
+	right: 50%;
+	width: 100vw;
+	margin-left: -50vw;
+	margin-right: -50vw;
 }
 
-.navBand {
-	background-image: url("/img/line.jpg");
+.topBar {
+	background-color: #004A8D;
 }
 
-.logoCell {
-	width: 85px;
-	vertical-align: bottom;
+.topBarInner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.brandRow td {
-	padding: 0;
-	line-height: 0;
+.topBarPhone {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 15px;
 }
 
-.brandLogoCell {
+.topBarPhone:hover {
+	text-decoration: underline;
+}
+
+.topBarPhone svg {
+	width: 16px;
+	height: 16px;
+	fill: #ffffff;
+}
+
+#shareSlot .sharepop-toggle {
+	background-color: #1565C0;
+}
+
+#shareSlot .sharepop-toggle:hover {
+	background-color: #002F5C;
+	opacity: 1;
+}
+
+.mainNav {
 	background-color: #ffffff;
 }
 
-.bannerCell {
-	background-color: #333333;
+.mainNavInner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.toplinks {
-	padding: 14px 20px 10px 10px;
-	line-height: 20px;
-	white-space: nowrap;
-	vertical-align: top;
-}
-
-.toplinks a,
-a.textlink {
-	color: #ffffff;
-	text-decoration: none;
-	font-size: 12px;
-}
-
-.toplinks a:hover,
-a.textlink:hover {
-	text-decoration: none;
-}
-
-.shareCell {
-	padding: 14px 16px 10px 10px;
-	vertical-align: top;
-	text-align: right;
-	width: 1%;
-	white-space: nowrap;
-}
-
-.subnavRow td {
-	padding: 0;
-	position: relative;
-}
-
-.subnavRow td:not(:last-child)::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	width: 2px;
-	background-image: linear-gradient(to right, #ffffff 0, #ffffff 1px, #1a1a1a 1px, #1a1a1a 2px);
-}
-
-.subnavLink {
-	display: inline-block;
-	color: #ffffff;
-	text-decoration: none;
-	font-size: 12px;
-	font-weight: normal;
-	text-transform: uppercase;
-	padding: 6px 10px;
-}
-
-.subnavLink:hover {
-	text-decoration: none;
-}
-
-.bandImg {
+.siteLogo {
 	display: block;
-	width: 100%;
-	height: 16px;
+	padding: 12px 0;
+}
+
+.siteLogo img {
+	display: block;
+	width: auto;
+	height: 110px;
+}
+
+.primaryNav {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.navLink {
+	color: #004A8D;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	padding: 10px 14px;
+}
+
+.navLink:hover {
+	color: #D31145;
 }
 
 /* CONTENT */
@@ -122,6 +127,45 @@ a.textlink:hover {
 	font-weight: normal;
 }
 
+.officeTitle,
+a.officeTitle {
+	color: #004A8D;
+	text-decoration: none;
+}
+
+.officeLinkIcon {
+	display: inline-flex;
+	vertical-align: middle;
+	color: #004A8D;
+}
+
+.officeLinkIcon svg {
+	width: 14px;
+	height: 14px;
+	fill: currentColor;
+}
+
+.officeLinkIcon:hover {
+	color: #D31145;
+}
+
+.pillLink {
+	display: inline-block;
+	color: #004A8D;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	border: 1px solid #004A8D;
+	border-radius: 999px;
+	padding: 8px 20px;
+}
+
+.pillLink:hover {
+	background-color: #004A8D;
+	color: #ffffff;
+	text-decoration: none;
+}
+
 main {
 	padding: 16px;
 	overflow: hidden;
@@ -130,19 +174,123 @@ main {
 
 /* FOOTER */
 
-.footerBar {
-	background-color: #252525;
-	min-height: 32px;
-	padding: 8px 15px;
+.newFooter {
+	background-color: #3D3D3D;
+}
+
+.newFooterInner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 50px 15px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.footerCol {
+	flex: 1 1 220px;
+	min-width: 200px;
+}
+
+.newFooterInner .footerCol:nth-child(2) {
+	flex-basis: 160px;
+	min-width: 140px;
+}
+
+.footerColTitle {
+	position: relative;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 20px;
+	padding-bottom: 14px;
+}
+
+.footerColTitle::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 73px;
+	height: 3px;
+	background-color: #D31145;
+}
+
+.footerLogoImg {
+	max-width: 200px;
+	height: auto;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.footerBadges {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: 14px;
+}
+
+.footerBadges img {
+	height: 40px;
+	width: auto;
+}
+
+.siorBadge {
+	margin-right: 15px;
+}
+
+.corfacBadge {
+	display: block;
+	height: 60px;
+	width: auto;
+	margin-bottom: 22px;
+}
+
+.footerText {
+	font-size: 14px;
+	line-height: 1.7;
+	color: #ffffff;
+	margin: 0 0 16px;
+}
+
+.footerText a,
+.footerCol a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footerText a:hover,
+.footerCol a:hover {
+	color: #D31145;
+	text-decoration: none;
+}
+
+.contactList {
+	list-style: none;
+	margin: 0 0 16px;
+	padding: 0;
+}
+
+.contactList li {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin-bottom: 14px;
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 1.5;
+}
+
+.contactList svg {
+	flex-shrink: 0;
+	width: 14px;
+	height: 14px;
+	fill: #ffffff;
+	margin-top: 3px;
 }
 
 .qrWrap {
-	text-align: right;
+	text-align: left;
 }
 
 .qrLink {
@@ -156,26 +304,38 @@ main {
 	padding: 4px 14px;
 }
 
-.qrLink:hover {
+.footerCol .footerQr .qrLink:hover {
+	color: #ffffff;
 	text-decoration: none;
 }
 
 #qrImage {
 	display: none;
-	margin-top: 8px;
+	margin-top: 0;
+	cursor: pointer;
+}
+
+.footerBottom {
+	border-top: 1px solid #2e2e2e;
+}
+
+.footerBottomInner {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 15px;
 }
 
 .smalltext {
-	color: #ffffff;
+	color: #9c9c9c;
 	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 15px;
+	font-size: 13px;
 }
 
 @media (max-width: 650px) {
-	.toplinks {
-		padding: 8px 8px 6px 6px;
+	.mainNavInner {
+		justify-content: center;
 	}
-	.shareCell {
-		padding: 8px 8px 6px 6px;
+	.primaryNav {
+		justify-content: center;
 	}
 }
