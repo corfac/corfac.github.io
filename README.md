@@ -1,4 +1,4 @@
 # corfac.github.io
 Partner resources
 
-Contact our ComponentCore.com tech team for website automation and database solutions.
+Contact our [ComponentCore.com](https://ComponentCore.com) tech team for website automation and database solutions.
